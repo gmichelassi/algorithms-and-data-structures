@@ -23,7 +23,26 @@ Sorting algorithms are a nice study case to learn algorithm analysis since it is
 
 ## Data Structures
 
-`to be added.`
+### Linear Lists
+
+There are a bunch of implementation of linear lists. Here are a few of them and their basic functions: `[initialize, show, search, insert, remove]`.
+
+```json
+{
+  "linear-lists/": {
+    "sequential-list": "a basic list where the elements have the same physical and logical order.",
+    "linked-list": "a list where the physical and logical order are not the same.",
+    "circular-linked-list": "a list where the elements forms a circle.",
+    "stack": "a list where insertions and removals happens at the beginning of the structure.",
+    "deque": "stack and a queue implemented in the same structure.",
+    "queue": "a list where insertions are at the end and removals are at the beginning."
+  }
+}
+```
+
+### Trees
+
+### Graphs
 
 ## References
 
