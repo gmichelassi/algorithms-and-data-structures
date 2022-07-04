@@ -32,3 +32,25 @@ Uma árvore binária é aquela que cada nó possui no máximo dois filhos. Um fi
 - Um grande problema dessa estrutura é que em algum momento, devido a regra de inserção (menores a esquerda e maiores a direita), a árvore tende a se desbalancear dependendo da ordem que os elementos foram inseridos, formando eventualmente uma estrutura ligada.
 
 ![image](/assets/imbalancing-problem.png)
+
+# Árvores AVL (Adelson Velsky e Landis, 1962)
+
+Uma árvore AVL é um tipo específico de árvore binária de busca que se mantém balanceada após qualquer operação realizada sobre ela, utilizando algoritmos de rotação para remanejar os nós da árvore.
+
+O balanceamento é garantido pela regra: `para todo nó, a diferença (em módulo) entre a altura da sub-árvore direita e da sub-árvore esquerda deve ser no máximo 1.`
+
+Devido a propriedade anterior a altura da árvore é de no máximo O(log n).
+
+## Balanceamento e Rotações
+
+Chamaremos o nó com desbalanceamento igual a 2 de `p`. Seu filho da direção da inserção será chamado de `u` e seu neto também no sentido da inserção será chamado de `v`. Faremos uma rotação para corrigir o desbalanceamento.
+
+![image](/assets/avl-rotation.png)
+
+Existem em total de quatro combinações possíveis para os nós `p`, `u` e `v`. Utilizamos um algoritmo específico para cada rotação.
+
+![image](/assets/avl-node-combinations.png)
+
+Dessas quatro combinações, derivamos quatro casos de rotação, conforme a figura a seguir.
+
+![image](/assets/avl-node-rotations.png)
