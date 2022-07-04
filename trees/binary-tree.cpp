@@ -156,17 +156,17 @@ void pre_order(node* n) {
 // 2. Em Ordem: Visitamos toda a subárvore esquerda, depois a Raiz e por fim toda a subárvore direita
 void in_order(node* n) {
     if(n) {
-        pre_order(n->left);
+        in_order(n->left);
         printf(" %d", n->key);
-        pre_order(n->right);
+        in_order(n->right);
     }
 }
 
 // 3. Pós ordem: Visitamos toda a subárvore esquerda, depois a subárvore direita e por fim a raiz
-void pos_ordem(node* n) {
+void post_ordem(node* n) {
     if(n) {
-        pre_order(n->left);
-        pre_order(n->right);
+        post_ordem(n->left);
+        post_ordem(n->right);
         printf(" %d", n->key);
     }
 }
@@ -210,7 +210,7 @@ int main() {
     in_order(t.root);
 
     printf("\nPós Ordem: ");
-    pos_ordem(t.root);
+    post_ordem(t.root);
 
     
     t.root = remove(t.root, 10);
