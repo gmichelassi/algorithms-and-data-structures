@@ -42,6 +42,22 @@ There are a bunch of implementation of linear lists. Here are a few of them and 
 
 ### Trees
 
+Trees are non-linear data-structs. Here we have three implementations of trees with their basic functions.
+
+```json
+{
+  "trees/": {
+    "binary-search-tree": "a basic tree implementation without any strategy to control the tree imbalance problem caused by insertions or deletions.",
+    "avl-tree": "a balanced binary search tree where the balance factor is given by the height of the sub-trees.",
+    "red-black-tree": "a balanced binary search tree where the balance factor is that every path from a parent node to a leaf contains the same number of black nodes."
+  }
+}
+```
+
+### Linear Lists vs Trees - Complexity Comparison
+
+![image](/assets/complexity-comparison.png)
+
 ### Graphs
 
 ## References
