@@ -17,7 +17,6 @@ class DepthFirstSearch:
             return 0
 
         for adjacent_vertice in self.graph.get_adjacent(vertice_i):
-            print(adjacent_vertice)
             if not self.marked[adjacent_vertice]:
                 distance = self.dfs(adjacent_vertice, vertice_j) + 1
 
