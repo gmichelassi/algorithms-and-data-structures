@@ -2,7 +2,7 @@
 
 Grafos são estruturas matemáticas que permitem codificar relacionamentos entre pares de objetos. Cada objeto é representado por um `vértice v` e seus relacionamentos são chamados de `arestas a`.
 
-![image](/assets/basic-graph.png)
+![image](../assets/basic-graph.png)
 
 Existem alguns tipos de grafos. Veremos a seguir.
 
@@ -65,7 +65,7 @@ Abaixo veremos algumas representações de grafos. Uma conceitual e duas computa
 
 Para cada nó, descrevemos a quais outros nós ele está ligado.
 
-![image](/assets/graph-map.png)
+![image](../assets/graph-map.png)
 
 ### Matrizes de Adjascência
 
@@ -76,7 +76,7 @@ A[i, j] = 1, se existe uma aresta que liga o vértice i até o vértice j
 A[i, j] = 0, se não existe uma aresta que ligue o vértice i até o vértice j
 ```
 
-![image](/assets/adjascency-matrix.png)
+![image](../assets/adjascency-matrix.png)
 
 Se o grafo for ponderado, em cada posição colocamos o peso `w` da conexão.
 
@@ -84,4 +84,39 @@ Se o grafo for ponderado, em cada posição colocamos o peso `w` da conexão.
 
 Para representar um grafo de N vértices, utilizamos um arranjo com N listas ligadas, na qual cada nó possui uma referência para o vértice específico.
 
-![image](/assets/adjascency-list.png)
+![image](../assets/adjascency-list.png)
+
+
+### Breadth-First Search (Busca em Largura)
+
+Existem várias maneiras de se realizar a busca por um nó específico em um grafo. Uma delas é a chamada busca em largura que encontra o menor caminho entre um nó inicial e um nó final, utilizando uma fila como estrutura auxiliar.
+
+A ideia da busca em largura é a partir de um dado nó, explorar seus vizinhos, marcando-os se eles levam ao nó procurado; em seguida explorar os vizinhos dos vizinhos, até encontrar o nó procurado.
+
+A complexidade temporal do algoritmo é dada por `O(|E| + |V|)`.
+
+
+### Depth-First Search (Busca em Profundidade)
+
+A busca em profundidade é um algoritmo recursivo que dado um nó inicial encontra um caminho até um nó final. Ele explora cada um dos vizinhos do nó inicial recursivamente até não ser mais possível, quando realiza uma operação de `backtracking`.
+
+A complexidade temporal do algoritmo é dada por `O(|E| + |V|)`.
+
+Uma das principais aplicações da busca em profundidade, diz respeito a encontrar componentens conexas num grafo.
+
+### Algoritmo de Dijkstra (1959)
+
+Concebido para encontrar o caminho de menor distância entre dois nós num grafo ponderado, é um dos algoritmos mais clássicos no estudo de grafos.
+
+A complexidade temporal do algoritmo é dada por `O(|E| + |V|log|V|)`
+
+
+### Ciclo Hamiltoniano
+
+Um ciclo hamiltoniano é um caminho que permite se passar por todos os vértices de um grafo sem repeti-los. Um grafo que possui esse ciclo é chamado de `grafo hamiltoniano`.
+
+Trata-se de um problema NP-Completo.
+
+#### Caixeiro Viajante
+
+Trata-se da tentativa de determinar o menor caminho possível passando por várias cidades (sem repeti-las) e então retornando a cidade origem.  É uma extensão direta de se encontrar um ciclo hamiltoniano.
