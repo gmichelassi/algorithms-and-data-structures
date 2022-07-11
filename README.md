@@ -60,6 +60,36 @@ Trees are non-linear data-structs. Here we have three implementations of trees w
 
 ### Graphs
 
+Graphs are a non-linear data-struct that is used to represent the relationship between two elements.
+
+```json
+{
+  "graphs/": {
+    "Graph": "main class, implementing a direct graph and some basic functions",
+    "BreadthFirstSearch": "algorithm to find the shortest path between two vertices",
+    "DepthFirstSearch": "algorithm to find the path between two vertices recursively"
+  }
+}
+```
+
+## Algorithms
+
+
+### Brute Force (`backtracking`)
+
+- Knight's Tour
+- Binary Knapsack Problem
+
+### Greedy Algorithms
+
+- Fractional Knapsack Problem
+
+## Other topics
+
+- Loop Invariant
+- Priority Queues
+- Minimum Fibonacci Heap
+
 ## References
 
 `T.H. Cormen, C.E. Leiserson, R.L. Rivest and C. Stein, Introduction to Algorithms, 2nd.ed., MIT Press & McGraw-Hill, 2001.`
