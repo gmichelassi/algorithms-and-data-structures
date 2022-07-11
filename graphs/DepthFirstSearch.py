@@ -10,6 +10,10 @@ class DepthFirstSearch:
         for vertice in range(len(graph.adjacency_list)):
             self.marked.append(False)
 
+    def reset_visited(self):
+        for vertice in range(len(self.graph.adjacency_list)):
+            self.marked[vertice] = False
+
     def dfs(self, vertice_i: int, vertice_j: int):
         self.marked[vertice_i] = True
 
